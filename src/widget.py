@@ -4,6 +4,7 @@ from masks import get_mask_account
 
 
 def mask_account_card(number_account_card: Union[int, str]) -> Union[int, str]:
+    """Функция, маскирующая номер счета и номер карты"""
     if "Счет" in number_account_card:
         return f"Cчет {get_mask_account(number_account_card)}"
     elif "Maestro" in number_account_card:
@@ -19,6 +20,7 @@ def mask_account_card(number_account_card: Union[int, str]) -> Union[int, str]:
 
 
 def get_date(str_with_date: str) -> str:
+    """Функция вывода даты в корректный формат"""
     year = str_with_date[:4]
     month = str_with_date[5:7]
     day = str_with_date[8:10]
