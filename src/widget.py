@@ -24,5 +24,3 @@ def get_date(str_with_date: str) -> str:
     day = str_with_date[8:10]
     format_date = f"{day}.{month}.{year}"
     return format_date
-
-print(get_date("2025-11-15T02:26:18.671407"))
