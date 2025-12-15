@@ -18,5 +18,11 @@ def mask_account_card(number_account_card: Union[int, str]) -> Union[int, str]:
         return f"Visa Gold {get_mask_card_number(number_account_card[-16:])}"
 
 
+def get_date(str_with_date: str) -> str:
+    year = str_with_date[:4]
+    month = str_with_date[5:7]
+    day = str_with_date[8:10]
+    format_date = f"{day}.{month}.{year}"
+    return format_date
 
-print(mask_account_card('Счет 35383033474447895560'))
+print(get_date("2025-11-15T02:26:18.671407"))
