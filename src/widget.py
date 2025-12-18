@@ -12,15 +12,8 @@ def mask_account_card(number_account_card: Union[int, str]) -> Union[int, str]:
         return f"{number_account_card[:-16]}{get_mask_card_number(number_account_card[-16:])}"
   
 
-def get_date(str_with_date: str) -> str:
-    """Функция вывода даты в корректный формат"""
-    pattern = r'(\d{4})-(\d{2})-(\d{2})'
-    match = re.search(pattern, str_with_date)
-    year, month, day = match.groups()
-    return f"{day}.{month}.{year}"
-
-
 def get_date(date_string: str) -> str:
+    """Функция вывода даты в корректный формат"""
     pattern = r'(\d{2,4})-(\d{2})-(\d{2,4})'
     match = re.search(pattern, date_string)
     part1, part2, part3 = match.groups()
@@ -29,5 +22,3 @@ def get_date(date_string: str) -> str:
     else:
         day, month, year = part1, part2, part3
     return f"{day}.{month}.{year}"
-
-    
