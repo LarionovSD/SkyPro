@@ -1,4 +1,4 @@
-def filter_by_state(list_with_data: list, state='EXECUTED') -> list:
+def filter_by_state(list_with_data: list, state="EXECUTED") -> list:
     """Функция для фильтрации списка по значению state"""
     filtered_list = []
     for element_of_dict in list_with_data:

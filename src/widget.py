@@ -10,11 +10,11 @@ def mask_account_card(number_account_card: Union[int, str]) -> Union[int, str]:
         return f"Cчет {get_mask_account(number_account_card)}"
     elif "Счет" not in number_account_card:
         return f"{number_account_card[:-16]}{get_mask_card_number(number_account_card[-16:])}"
-  
+
 
 def get_date(date_string: str) -> str:
     """Функция вывода даты в корректный формат"""
-    pattern = r'(\d{2,4})-(\d{2})-(\d{2,4})'
+    pattern = r"(\d{2,4})-(\d{2})-(\d{2,4})"
     match = re.search(pattern, date_string)
     part1, part2, part3 = match.groups()
     if len(part1) == 4:
