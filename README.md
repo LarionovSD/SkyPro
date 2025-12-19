@@ -42,3 +42,6 @@ def filter_by_state(list_with_data: list, state="EXECUTED")
 def sort_by_date(list_with_data: list, sorting_order=True)
 ```
 *функция для сортировка данных из списка словарей по дате, по умолчанию парамет сортировки по убыванию sorting_order=True*
+
+## Ссылки:
+Данный проект размещен на сайте [GitHub](https://github.com/)
