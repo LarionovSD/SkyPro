@@ -1,10 +1,10 @@
 import re
-from typing import Union
+from typing import Optional
 from masks import get_mask_card_number
 from masks import get_mask_account
 
 
-def mask_account_card(number_account_card: Union[int, str]) -> Union[int, str]:
+def mask_account_card(number_account_card: str) -> Optional[str]:
     """Функция, маскирующая номер счета и номер карты"""
     if "Счет" in number_account_card:
         return f"Cчет {get_mask_account(number_account_card)}"
