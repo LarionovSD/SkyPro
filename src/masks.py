@@ -15,5 +15,9 @@ def get_mask_card_number(number_card: Union[int, str]) -> Union[int, str]:
 def get_mask_account(number_account: Union[int, str]) -> Union[int, str]:
     """Функция, маскирующая часть цифр с номера счета"""
     str_number = str(number_account)
+    if len(str_number) != 20:
+        raise ValueError("Номер счета должен состоять из 20 цифр")
+    elif not str_number.isdigit():
+        raise ValueError("Неверный формат номера счета")
     mask_account = f"**{str_number[-4:]}"
     return mask_account

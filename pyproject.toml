@@ -35,7 +35,7 @@ exclude = '.mypy_cache, .git'
 
 
 [tool.isort]
-line-length = 119
+line_length = 119
 
 [tool.mypy]
 disallow_untyped_defs = true
